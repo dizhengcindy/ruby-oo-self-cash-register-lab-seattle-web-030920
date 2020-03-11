@@ -5,6 +5,7 @@ class CashRegister
   def initialize(d=0)
   @total = 0 
   @discount = d 
+  @item = []
   end
   
   def total=(num)
@@ -14,6 +15,7 @@ class CashRegister
   def add_item(title,price, q=1)
     self.total += price*q
   end
+
   def apply_discount
     if @discount>0
        @total = @total*(1-@discount.to_f/100)
@@ -22,7 +24,10 @@ class CashRegister
      "There is no discount to apply."
     end
   end
- def 
+ 
+ def items
+ @item<<self.title
+ end
 
 
 end
