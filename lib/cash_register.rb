@@ -14,15 +14,11 @@ class CashRegister
 
   def add_item(title,price, q=1)
     self.total += price*q
-    i = 0 
-    while i<q do
-    @item << title
-   end
   end
 
   def apply_discount
     if @discount>0
-       @total = @total*(1-@discount.to_f/100)
+       self.total = @total*(1-@discount.to_f/100)
      "After the discount, the total comes to $#{total.to_i}."
      else
      "There is no discount to apply."
