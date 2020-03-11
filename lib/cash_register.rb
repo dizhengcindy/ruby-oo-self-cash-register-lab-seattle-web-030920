@@ -19,7 +19,7 @@ class CashRegister
     @item << title
     i+=1
     end
-    @last = price
+    @last = price*q
   end
 
   def apply_discount
@@ -36,9 +36,9 @@ class CashRegister
  end
  def void_last_transaction
  self.total-=@last
- 
  end
 
+  
 end
 
 
