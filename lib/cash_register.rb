@@ -19,6 +19,7 @@ class CashRegister
     @item << title
     i+=1
     end
+    @last = price
   end
 
   def apply_discount
