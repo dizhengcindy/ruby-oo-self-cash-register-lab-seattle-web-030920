@@ -1,14 +1,16 @@
 require 'pry'
 class CashRegister
-  attr_reader :total
+  
   attr_accessor:discount
   def initialize(d)
   @total = 0 
   @discount = d 
   end
+  
   def total
     @total
   end
+  
   def total=(num)
     total = num
   end
